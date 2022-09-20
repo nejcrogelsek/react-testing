@@ -48,14 +48,13 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run test:coverage`
 
+`test:coverage in package.json`
 ```bash
-# test:coverage
-$ yarn run test:coverage
+$ "test:coverage": "npm run test -- --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}'"
 ```
 
 ```bash
-# test:coverage in package.json
-$ "test:coverage": "npm run test -- --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}'"
+$ yarn run test:coverage
 ```
 
 ### `npm run build`
