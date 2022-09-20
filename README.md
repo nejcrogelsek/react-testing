@@ -2,6 +2,33 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## About tests
+
+Jest is a test runner than can: - find the tests - run it - provide user friendly message if test is PASS or FAIL
+
+Run jest: `npm run test`
+
+test(name, fn, timeout) - name: test name used to indentify the test - fn: function that contains the expectations to test - timeout: is optional for specifying how long to wait before aborting the test. The default timeout value is 5 seconds.
+
+### Group tests
+
+describe(name, fn) - name: group name used to indentify the group of tests - fn: function that contains the expectations to test
+
+test.skip / describe.skip - skips the test or group of tests
+test.only / describe.only - jest picks only that test / group to run
+
+### Filename conventions
+
+Files with .test.js or .test.tsx suffix.
+Files with .spec.js or .spec.tsx suffix.
+Files with .js or .tsx suffix in **tests** folders.
+
+Recommendation is to always put your tests next to the code they are testing so that relative imports are shorter.
+
+We can use `it` instead of `test`.
+We can use `fit` instead of `test.only`.
+We can use `xit` instead of `test.skip`.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -18,6 +45,18 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run test:coverage`
+
+```bash
+# test:coverage
+$ yarn run test:coverage
+```
+
+```bash
+# test:coverage in package.json
+$ "test:coverage": "npm run test -- --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}'"
+```
 
 ### `npm run build`
 

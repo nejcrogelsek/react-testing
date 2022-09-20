@@ -12,10 +12,12 @@ import App from "./App";
   test(name, fn, timeout)
     - name: test name used to indentify the test
     - fn: function that contains the expectations to test
-    - timeout: is optional for specifying how long to wait before aborting the test. The default timeout value is 5 seconds.
-  */
+    - timeout: is optional for specifying how long to wait before aborting the test. The default timeout value is 5 seconds.  
+    */
 
-test("renders learn react link", () => {
+// skip - skips the test
+// only - jest picks only that test to run
+test.skip("renders learn react link", () => {
   render(<App />);
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
