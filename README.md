@@ -29,6 +29,13 @@ We can use `it` instead of `test`.
 We can use `fit` instead of `test.only`.
 We can use `xit` instead of `test.skip`.
 
+### Assertions
+
+When writing tests, we often need to check that values meet certain conditions.
+Assertions decide if a test passes or fails.
+
+Find more about using matchers [here](https://jestjs.io/docs/using-matchers) or in [github repo](https://github.com/testing-library/jest-dom).
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -49,6 +56,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ### `npm run test:coverage`
 
 `test:coverage in package.json`
+
 ```bash
 $ "test:coverage": "npm run test -- --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}'"
 ```
