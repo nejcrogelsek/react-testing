@@ -36,6 +36,18 @@ Assertions decide if a test passes or fails.
 
 Find more about using matchers [here](https://jestjs.io/docs/using-matchers) or in [github repo](https://github.com/testing-library/jest-dom).
 
+## What to test
+Guidelines:
+Test - if component renders
+Test - if component renders with props
+Test - if component renders in different states (auth / no auth)
+Test - if component reacts to events (buttons, font controls)
+
+### What not to test
+Implementation details - test behaviour not how behaviour is implemented
+Third party code - example: material ui
+Code that is not important from a user point of view
+
 ## Available Scripts
 
 In the project directory, you can run:
