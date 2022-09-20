@@ -8,11 +8,16 @@ Jest is a test runner than can: - find the tests - run it - provide user friendl
 
 Run jest: `npm run test`
 
-test(name, fn, timeout) - name: test name used to indentify the test - fn: function that contains the expectations to test - timeout: is optional for specifying how long to wait before aborting the test. The default timeout value is 5 seconds.
+test(name, fn, timeout)
+    - name: test name used to indentify the test
+    - fn: function that contains the expectations to test
+    - timeout: is optional for specifying how long to wait before aborting the test. The default timeout value is 5 seconds.
 
 ### Group tests
 
-describe(name, fn) - name: group name used to indentify the group of tests - fn: function that contains the expectations to test
+describe(name, fn)
+    - name: group name used to indentify the group of tests
+    - fn: function that contains the expectations to test
 
 test.skip / describe.skip - skips the test or group of tests
 test.only / describe.only - jest picks only that test / group to run
@@ -47,6 +52,28 @@ Test - if component reacts to events (buttons, font controls)
 Implementation details - test behaviour not how behaviour is implemented
 Third party code - example: material ui
 Code that is not important from a user point of view
+
+## RTL Queries
+Queries are methods that Testing Library provides to find elements on the page.
+Every test we write generally involves the folowing basic steps:
+1. Render the component
+2. Find an element rendered by the component
+3. Assert against the element found in step 2 which will pass or fail the test
+
+To render the component we use `render` method from RTL.
+
+For assertion, we use expect passing in the value and combine it with a matcher function from jest or jest-dom.
+
+To find single element on the page, we have:
+    - getBy..suffix
+    - queryBy..suffix
+    - findBy..suffix
+To find multiple elements on the page, we have:
+    - getAllBy..suffix
+    - queryAllBy..suffix
+    - findAllBy..suffix
+
+The suffix can be one of `Role`, `LabelText`, `PlaceHolderText`, `Text`, `DisplayValue`, `AltText`, `Title` and finally `TestId`.
 
 ## Available Scripts
 
