@@ -116,6 +116,16 @@ Returns the element that has the matching data-testid attribute.
 Find multiple elements in the DOM.
 Returns an array of all matching nodes for a query, and throws an error if no elements match.
 
+#### queryBy & queryAllBy
+
+`queryBy`:
+- Returns the matching node for a query, and return null if no elements match
+- Useful for asserting an element that is not present
+- Throws an error if more than one match is found
+
+`queryAllBy`:
+- Returns an array of all matching nodes for a query, and return an empty array if no elements match
+
 ## Priority Order for Queries
 "Your test should resemble how users interact with your code (component, page, etc.) as much as possible"
     1. getByRole
