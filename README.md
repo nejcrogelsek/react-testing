@@ -103,6 +103,10 @@ Returns the input, textarea or select element that has the matching display valu
 Will return the element that has the given alt text.
 This method only supports elements which accept an alt attribute like <img />, <input>, <area> or custom html elements.
 
+#### getByTitle
+
+Returns the element that has the matching title attribute.
+
 ## Available Scripts
 
 In the project directory, you can run:
