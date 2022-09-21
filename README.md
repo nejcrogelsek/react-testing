@@ -89,6 +89,9 @@ Link to all roles usage: https://www.w3.org/TR/html-aria/#docconformance
 - checked
 - pressed
 
+#### getByPlaceholderText
+Will search for all elements with placeholder attribute and find one that maches the given text.
+
 ## Available Scripts
 
 In the project directory, you can run:
