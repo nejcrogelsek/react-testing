@@ -111,6 +111,17 @@ Returns the element that has the matching title attribute.
 
 Returns the element that has the matching data-testid attribute.
 
+## Priority Order for Queries
+"Your test should resemble how users interact with your code (component, page, etc.) as much as possible"
+    1. getByRole
+    2. getByLabelText
+    3. getByPlaceholderText
+    4. getByText (Example: for non interactive elements)
+    5. getByDisplayValue (Example: for pages were inputs are already populated)
+    6. look at the component code
+    7. getByAltText
+    8. getByTitle - is not consistently read by screen readers and is not visible by default for cited users (user cannot hear or see this one)
+
 ## Available Scripts
 
 In the project directory, you can run:
