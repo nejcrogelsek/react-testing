@@ -127,6 +127,34 @@ Returns an array of all matching nodes for a query, and throws an error if no el
     7. getByAltText
     8. getByTitle - is not consistently read by screen readers and is not visible by default for cited users (user cannot hear or see this one)
 
+## TextMatch
+
+TextMatch represents a type which can be either a:
+- string
+- regex
+- function
+
+### TextMatch - string
+<div>Hello World</div>
+screen.getByText("Hello World") // full string match
+screen.getByText("llo World", { `exact`: false }) // substring match
+screen.getByText("hello world", { `exact`: false }) // ignore case
+
+### TextMatch - regex
+<div>Hello World</div>
+screen.getByText(/World/) // substring match
+screen.getByText(/world/i) // substring match, ignore case
+screen.getByText(/^hello world$/i) // full string match, ignore case
+
+### TextMatch - custom function
+<div>Hello World</div>
+(content?: string, element?: Element | null) => boolean
+
+screen.getByText((content) => content.startsWith("Hello"))
+
+Find multiple elements in the DOM.
+Returns an array of all matching nodes for a query, and throws an error if no elements match.
+
 ## Available Scripts
 
 In the project directory, you can run:

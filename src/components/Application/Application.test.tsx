@@ -10,8 +10,23 @@ describe("Application", () => {
     const sectionHeading = screen.getByRole("heading", { level: 2 });
     expect(sectionHeading).toBeInTheDocument();
 
+    // exact TextMatch
     const paragraphElement = screen.getByText("All fields are mandatory");
     expect(paragraphElement).toBeInTheDocument();
+
+    // not exact TextMatch
+    const paragraphElement2 = screen.getByText("mandatory", { exact: false });
+    expect(paragraphElement2).toBeInTheDocument();
+
+    // regex TextMatch
+    const paragraphElement3 = screen.getByText(/all fields are mandatory/i);
+    expect(paragraphElement3).toBeInTheDocument();
+
+    // custom function TextMatch
+    const paragraphElement4 = screen.getByText((content) =>
+      content.startsWith("All")
+    );
+    expect(paragraphElement4).toBeInTheDocument();
 
     const closeElement = screen.getByTitle("close");
     expect(closeElement).toBeInTheDocument();
