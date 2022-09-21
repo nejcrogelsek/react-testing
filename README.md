@@ -94,6 +94,10 @@ Will search for all elements with placeholder attribute and find one that maches
 Will search for all elements that have node with textContent matching the given text.
 Typically, you'd use this to find paragraph, div or span elements.
 
+#### getByDisplayValue
+
+Returns the input, textarea or select element that has the matching display value.
+
 ## Available Scripts
 
 In the project directory, you can run:
