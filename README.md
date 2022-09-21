@@ -111,6 +111,11 @@ Returns the element that has the matching title attribute.
 
 Returns the element that has the matching data-testid attribute.
 
+#### getAllBy
+
+Find multiple elements in the DOM.
+Returns an array of all matching nodes for a query, and throws an error if no elements match.
+
 ## Priority Order for Queries
 "Your test should resemble how users interact with your code (component, page, etc.) as much as possible"
     1. getByRole
