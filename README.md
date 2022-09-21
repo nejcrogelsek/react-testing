@@ -107,6 +107,10 @@ This method only supports elements which accept an alt attribute like <img />, <
 
 Returns the element that has the matching title attribute.
 
+#### getByTestId
+
+Returns the element that has the matching data-testid attribute.
+
 ## Available Scripts
 
 In the project directory, you can run:
