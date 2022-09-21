@@ -75,6 +75,10 @@ To find multiple elements on the page, we have:
 
 The suffix can be one of `Role`, `LabelText`, `PlaceHolderText`, `Text`, `DisplayValue`, `AltText`, `Title` and finally `TestId`.
 
+### Options
+1. getByRole
+    - https://www.w3.org/TR/html-aria/#docconformance
+
 ## Available Scripts
 
 In the project directory, you can run:
