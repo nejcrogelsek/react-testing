@@ -1,6 +1,33 @@
-# Getting Started with Create React App
+# RTL Tutorial
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can find tutorial on [Codevolution](https://www.youtube.com/watch?v=T2sv8jXoP4s&list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd&index=2).
+
+### Table of contents
+
+- [About tests](#about-tests)
+    - [Group tests](#group-tests)
+    - [Filename conventions](#filename-conventions)
+    - [Assertions](#assertions)
+- [What to test](#what-to-test)
+- [RTL Queries](#rtl-queries)
+    - [Options](#group-tests)
+        - [getByRole](#getbyrole)
+        - [getByPlaceholderText](#getbyplaceholdertext)
+        - [getByText](#getbytext)
+        - [getByDisplayValue](#getbydisplayvalue)
+        - [getByAltText](#getbyalttext)
+        - [getByTitle](#getbytitle)
+        - [getByTestId](#getbytestid)
+        - [getAllBy](#getallby)
+        - [queryBy & queryAllBy](#queryby-&-queryallby)
+        - [findBy & findAllBy](#findby-&-findallby)
+- [Priority Order for Queries](#priority-order-for-queries)
+- [TextMatch](#textmatch)
+- [Testing user interactions](#testing-user-interactions)
+- [Available Scripts](#available-scripts)
+- [Learn more](#learn-more)
+- [References](#references)
+- [Author Info](#author-info)
 
 ## About tests
 
@@ -39,16 +66,18 @@ Find more about using matchers [here](https://jestjs.io/docs/using-matchers) or 
 ## What to test
 
 Guidelines:
-Test - if component renders
-Test - if component renders with props
-Test - if component renders in different states (auth / no auth)
-Test - if component reacts to events (buttons, font controls)
+- Test if component renders
+- Test if component renders with props
+- Test if component renders in different states (auth / no auth)
+- Test if component reacts to events (buttons, font controls)
 
 ### What not to test
 
 Implementation details - test behaviour not how behaviour is implemented
 Third party code - example: material ui
 Code that is not important from a user point of view
+
+[Back To The Top](#rtl-tutorial)
 
 ## RTL Queries
 
@@ -139,6 +168,8 @@ For example, data tha is fetched from a server will be rendered only after a few
 - Returns a promise which resolves to an array of elements when any elements are found which match the given query.
 - The promise is rejected if no elements are found after the default timeout of 1000ms.
 
+[Back To The Top](#rtl-tutorial)
+
 ## Priority Order for Queries
 "Your test should resemble how users interact with your code (component, page, etc.) as much as possible"
     1. getByRole
@@ -149,6 +180,8 @@ For example, data tha is fetched from a server will be rendered only after a few
     6. look at the component code
     7. getByAltText
     8. getByTitle - is not consistently read by screen readers and is not visible by default for cited users (user cannot hear or see this one)
+
+[Back To The Top](#rtl-tutorial)
 
 ## TextMatch
 
@@ -177,6 +210,19 @@ screen.getByText((content) => content.startsWith("Hello"))
 
 Find multiple elements in the DOM.
 Returns an array of all matching nodes for a query, and throws an error if no elements match.
+
+[Back To The Top](#rtl-tutorial)
+
+## Testing user interactions
+
+Difference between fireEvent and user-event:
+![fireEvent_vs_user-event](./src/assets/readme/fireEvent_vs_user-event.png)
+
+`user-event`:
+- A companion library for Testing Library that stimulates user interfaces by dispatching the events that would happen if the interaction took place in the browser.
+- It is recommended way to test user interactions with RTL.
+
+[Back To The Top](#rtl-tutorial)
 
 ## Available Scripts
 
@@ -227,8 +273,25 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+[Back To The Top](#rtl-tutorial)
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+[Back To The Top](#rtl-tutorial)
+
+## References
+
+- Youtube channel - [Codevolution](https://www.youtube.com/c/Codevolution)
+
+[Back To The Top](#rtl-tutorial)
+
+## Author Info
+
+- LinkedIn - [@nejcrogelsek](https://www.linkedin.com/in/nejcrogelsek/)
+- Github - [@nejcrogelsek](https://github.com/nejcrogelsek)
+
+[Back To The Top](#rtl-tutorial)
