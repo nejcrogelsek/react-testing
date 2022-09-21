@@ -10,8 +10,13 @@ describe("Application", () => {
     const sectionHeading = screen.getByRole("heading", { level: 2 });
     expect(sectionHeading).toBeInTheDocument();
 
+    // getByRole - should be preference
     const nameElement = screen.getByRole("textbox", { name: "Name" });
     expect(nameElement).toBeInTheDocument();
+
+    // getByLabelText
+    const nameElement2 = screen.getByLabelText("Name", { selector: "input" });
+    expect(nameElement2).toBeInTheDocument();
 
     const bioElement = screen.getByRole("textbox", { name: "Bio" });
     expect(bioElement).toBeInTheDocument();
@@ -21,6 +26,12 @@ describe("Application", () => {
 
     const termsElement = screen.getByRole("checkbox");
     expect(termsElement).toBeInTheDocument();
+
+    // getByLabelText
+    const termsElement2 = screen.getByLabelText(
+      "I agree to the terms and conditions"
+    );
+    expect(termsElement2).toBeInTheDocument();
 
     const submitButtonElement = screen.getByRole("button");
     expect(submitButtonElement).toBeInTheDocument();

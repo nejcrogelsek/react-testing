@@ -15,7 +15,7 @@ const Application: FC = () => {
           <textarea name="bio" id="bio" />
         </div>
         <div>
-          <label htmlFor="job-location">Job location</label>
+          <label htmlFor="job-location">Name</label>
           <select id="job-location">
             <option value="">Select a country</option>
             <option value="US">United States</option>
