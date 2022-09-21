@@ -33,11 +33,15 @@ describe("Skills", () => {
 
   test("Start learning button is eventually displayed", async () => {
     render(<Skills skills={skills} />);
+    // Debug HTML with Login button
+    screen.debug()
     const startLearningButton = await screen.findByRole(
       "button",
       { name: "Start learning" },
       { timeout: 2000 }
     );
+    // Debug updated HTML with Start learning button
+    screen.debug()
     expect(startLearningButton).toBeInTheDocument();
   });
 });
