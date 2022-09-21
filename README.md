@@ -98,6 +98,11 @@ Typically, you'd use this to find paragraph, div or span elements.
 
 Returns the input, textarea or select element that has the matching display value.
 
+#### getByAltText
+
+Will return the element that has the given alt text.
+This method only supports elements which accept an alt attribute like <img />, <input>, <area> or custom html elements.
+
 ## Available Scripts
 
 In the project directory, you can run:
