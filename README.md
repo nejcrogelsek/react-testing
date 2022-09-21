@@ -76,8 +76,18 @@ To find multiple elements on the page, we have:
 The suffix can be one of `Role`, `LabelText`, `PlaceHolderText`, `Text`, `DisplayValue`, `AltText`, `Title` and finally `TestId`.
 
 ### Options
-1. getByRole
-    - https://www.w3.org/TR/html-aria/#docconformance
+#### getByRole
+Link to all roles usage: https://www.w3.org/TR/html-aria/#docconformance
+`getByRole Options`:
+- name: The accessible name is for simple cases equal to:
+    1. the label of a form element
+    2. the text content of a button
+    3. the value of the aria-label attribute
+- level: Example: for headings
+- hidden
+- selected
+- checked
+- pressed
 
 ## Available Scripts
 
