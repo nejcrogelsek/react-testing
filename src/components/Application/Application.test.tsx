@@ -10,6 +10,9 @@ describe("Application", () => {
     const sectionHeading = screen.getByRole("heading", { level: 2 });
     expect(sectionHeading).toBeInTheDocument();
 
+    const paragraphElement = screen.getByText("All fields are mandatory");
+    expect(paragraphElement).toBeInTheDocument();
+
     // getByRole - should be preference
     const nameElement = screen.getByRole("textbox", { name: "Name" });
     expect(nameElement).toBeInTheDocument();
