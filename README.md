@@ -35,6 +35,7 @@ You can find different versions [HERE](https://www.npmjs.com/package/@testing-li
 - [Testing user interactions](#testing-user-interactions)
     - [Pointer interactions](#pointer-interactions)
     - [Keyboard interactions](#keyboard-interactions)
+    - [act](#act)
 - [Available Scripts](#available-scripts)
 - [Learn more](#learn-more)
 - [References](#references)
@@ -291,6 +292,9 @@ Difference between fireEvent and user-event:
 `Keyboard API`
 - keyboard('foo') // translates to: f, o, o
 - keyboard('{Shift>}A{/Shift}') // hold a key -> translates to: Shift(down), A, Shift(up)
+
+### act
+Read more about act [HERE](https://reactjs.org/docs/testing-recipes.html#act).
 
 [Back To The Top](#rtl-tutorial)
 
