@@ -25,6 +25,7 @@ You can find tutorial on [Codevolution](https://www.youtube.com/watch?v=T2sv8jXo
 - [Priority Order for Queries](#priority-order-for-queries)
 - [TextMatch](#textmatch)
 - [Testing user interactions](#testing-user-interactions)
+    - [Pointer interactions](#pointer-interactions)
 - [Available Scripts](#available-scripts)
 - [Learn more](#learn-more)
 - [References](#references)
@@ -222,6 +223,21 @@ Difference between fireEvent and user-event:
 `user-event`:
 - A companion library for Testing Library that stimulates user interfaces by dispatching the events that would happen if the interaction took place in the browser.
 - It is recommended way to test user interactions with RTL.
+
+### Pointer interactions
+
+`Convenience APIs` typically used when writting tests.
+- click() - is a convenience API that internally calls pointer API
+- dblClick() - double click
+- tripleClick() - triple click
+- hover() - on hover (use example: appearance of tooltips, hover styles,...)
+- unhover() - on unhover (use example: appearance of tooltips, hover styles,...)
+
+`Pointer APIs`
+pointer({keys: '[MouseLeft]'}) - left mouse click `OR` pointer('[MouseLeft]') - if keys is the only argument to functions.
+pointer({keys: '[MouseLeft][MouseRight]'}) - left mouse click followed by right mouse click 
+pointer('[MouseLeft>]') - press a button without releasing it
+pointer('[/MouseLeft]') - releasing previously pressed button
 
 [Back To The Top](#rtl-tutorial)
 
