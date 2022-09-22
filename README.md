@@ -8,6 +8,7 @@ You can find tutorial on [Codevolution](https://www.youtube.com/watch?v=T2sv8jXo
 ```bash
 npm i @testing-library/user-event@14.4.3
 ```
+You can find different versions [HERE](https://www.npmjs.com/package/@testing-library/user-event)
 
 ### Table of contents
 
