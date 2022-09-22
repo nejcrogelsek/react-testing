@@ -2,6 +2,13 @@
 
 You can find tutorial on [Codevolution](https://www.youtube.com/watch?v=T2sv8jXoP4s&list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd&index=2).
 
+**IMPORTANT**
+`CRA installs user-event but needs upgrading!`
+- Latest version when writing this repo is:
+```bash
+npm i @testing-library/user-event@14.4.3
+```
+
 ### Table of contents
 
 - [About tests](#about-tests)
@@ -26,6 +33,7 @@ You can find tutorial on [Codevolution](https://www.youtube.com/watch?v=T2sv8jXo
 - [TextMatch](#textmatch)
 - [Testing user interactions](#testing-user-interactions)
     - [Pointer interactions](#pointer-interactions)
+    - [Keyboard interactions](#keyboard-interactions)
 - [Available Scripts](#available-scripts)
 - [Learn more](#learn-more)
 - [References](#references)
@@ -234,10 +242,35 @@ Difference between fireEvent and user-event:
 - unhover() - on unhover (use example: appearance of tooltips, hover styles,...)
 
 `Pointer APIs`
-pointer({keys: '[MouseLeft]'}) - left mouse click `OR` pointer('[MouseLeft]') - if keys is the only argument to functions.
-pointer({keys: '[MouseLeft][MouseRight]'}) - left mouse click followed by right mouse click 
-pointer('[MouseLeft>]') - press a button without releasing it
-pointer('[/MouseLeft]') - releasing previously pressed button
+- pointer({keys: '[MouseLeft]'}) - left mouse click `OR` pointer('[MouseLeft]') - if keys is the only argument to functions.
+- pointer({keys: '[MouseLeft][MouseRight]'}) - left mouse click followed by right mouse click 
+- pointer('[MouseLeft>]') - press a button without releasing it
+- pointer('[/MouseLeft]') - releasing previously pressed button
+
+### Keyboard interactions
+
+`Convenience API`
+- tab() - click TAB on keyboard
+
+`Utility API`
+- type()
+- clear()
+![utilityapi_clear](./src/assets/readme/utilityapi_clear.png)
+- selectOptions()
+![utilityapi_selectOptions](./src/assets/readme/utilityapi_selectOptions.png)
+- deselectOptions()
+![utilityapi_deselectOptions](./src/assets/readme/utilityapi_deselectOptions.png)
+- upload()
+![utilityapi_upload](./src/assets/readme/utilityapi_upload.png)
+
+`Clipboard API`
+- copy()
+- cut()
+- paste()
+
+`Keyboard API`
+- keyboard('foo') // translates to: f, o, o
+- keyboard('{Shift>}A{/Shift}') // hold a key -> translates to: Shift(down), A, Shift(up)
 
 [Back To The Top](#rtl-tutorial)
 
