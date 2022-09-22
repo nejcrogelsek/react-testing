@@ -267,7 +267,7 @@ $ "test:coverage": "npm run test -- --coverage --watchAll --collectCoverageFrom=
 ```
 
 ```bash
-$ yarn run test:coverage
+$ npm run test:coverage
 ```
 
 ### `npm run build`
