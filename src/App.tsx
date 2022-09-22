@@ -1,17 +1,16 @@
 import "./App.css";
-import Application from "./components/Application/Application";
-import Counter from "./components/Counter/Counter";
-import Skills from "./components/Skills/Skills";
+import AppProviders from "./providers/app-providers";
+import MuiMode from "./components/mui/mui-mode";
+import Home from "./pages/Home/Home";
 
 const App = () => {
   return (
-    <div className="App">
-      <Application />
-      <hr style={{margin: '2rem 0'}} />
-      <Skills skills={["HTML", "CSS", "JavaScript"]} />
-      <hr style={{margin: '2rem 0'}} />
-      <Counter />
-    </div>
+    <AppProviders>
+      <div className="App">
+        <MuiMode />
+        <Home />
+      </div>
+    </AppProviders>
   );
 };
 
