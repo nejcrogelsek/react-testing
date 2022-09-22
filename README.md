@@ -296,11 +296,11 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 `test:coverage in package.json`
 
 ```bash
-$ "test:coverage": "npm run test -- --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}'"
+"test:coverage": "npm run test -- --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}'"
 ```
 
 ```bash
-$ npm run test:coverage
+npm run test:coverage
 ```
 
 ### `npm run build`
