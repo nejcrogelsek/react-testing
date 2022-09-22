@@ -41,15 +41,23 @@ npm i @testing-library/user-event@14.4.3
 
 ## About tests
 
-Jest is a test runner than can: - find the tests - run it - provide user friendly message if test is PASS or FAIL
+Jest is a test runner than can:
+- find the tests
+- run it
+- provide user friendly message if test is PASS or FAIL
 
 Run jest: `npm run test`
 
-test(name, fn, timeout) - name: test name used to indentify the test - fn: function that contains the expectations to test - timeout: is optional for specifying how long to wait before aborting the test. The default timeout value is 5 seconds.
+test(name, fn, timeout)
+- name: test name used to indentify the test
+- fn: function that contains the expectations to test
+- timeout: is optional for specifying how long to wait before aborting the test. The default timeout value is 5 seconds.
 
 ### Group tests
 
-describe(name, fn) - name: group name used to indentify the group of tests - fn: function that contains the expectations to test
+describe(name, fn)
+- name: group name used to indentify the group of tests
+- fn: function that contains the expectations to test
 
 test.skip / describe.skip - skips the test or group of tests
 test.only / describe.only - jest picks only that test / group to run
@@ -182,14 +190,14 @@ For example, data tha is fetched from a server will be rendered only after a few
 
 ## Priority Order for Queries
 "Your test should resemble how users interact with your code (component, page, etc.) as much as possible"
-    1. getByRole
-    2. getByLabelText
-    3. getByPlaceholderText
-    4. getByText (Example: for non interactive elements)
-    5. getByDisplayValue (Example: for pages were inputs are already populated)
-    6. look at the component code
-    7. getByAltText
-    8. getByTitle - is not consistently read by screen readers and is not visible by default for cited users (user cannot hear or see this one)
+1. getByRole
+2. getByLabelText
+3. getByPlaceholderText
+4. getByText (Example: for non interactive elements)
+5. getByDisplayValue (Example: for pages were inputs are already populated)
+6. look at the component code
+7. getByAltText
+8. getByTitle - is not consistently read by screen readers and is not visible by default for cited users (user cannot hear or see this one)
 
 [Back To The Top](#rtl-tutorial)
 
@@ -202,21 +210,21 @@ TextMatch represents a type which can be either a:
 
 ### TextMatch - string
 <div>Hello World</div>
-screen.getByText("Hello World") // full string match
-screen.getByText("llo World", { `exact`: false }) // substring match
-screen.getByText("hello world", { `exact`: false }) // ignore case
+screen.getByText(`"Hello World"`) // full string match
+screen.getByText(`"llo World", { `exact`: false }`) // substring match
+screen.getByText(`"hello world", { `exact`: false }`) // ignore case
 
 ### TextMatch - regex
 <div>Hello World</div>
-screen.getByText(/World/) // substring match
-screen.getByText(/world/i) // substring match, ignore case
-screen.getByText(/^hello world$/i) // full string match, ignore case
+screen.getByText(`/World/`) // substring match
+screen.getByText(`/world/i`) // substring match, ignore case
+screen.getByText(`/^hello world$/i`) // full string match, ignore case
 
 ### TextMatch - custom function
 <div>Hello World</div>
 (content?: string, element?: Element | null) => boolean
 
-screen.getByText((content) => content.startsWith("Hello"))
+screen.getByText(`(content) => content.startsWith("Hello")`)
 
 Find multiple elements in the DOM.
 Returns an array of all matching nodes for a query, and throws an error if no elements match.
