@@ -262,6 +262,7 @@ Difference between fireEvent and user-event:
 
 `Utility API`
 - type()
+---
 - clear()
 ![utilityapi_clear](./src/assets/readme/utilityapi_clear.png)
 ---
