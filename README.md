@@ -48,25 +48,25 @@ Jest is a test runner than can:
 
 Run jest: `npm run test`
 
-test(name, fn, timeout)
+**test(name, fn, timeout)**
 - name: test name used to indentify the test
 - fn: function that contains the expectations to test
 - timeout: is optional for specifying how long to wait before aborting the test. The default timeout value is 5 seconds.
 
 ### Group tests
 
-describe(name, fn)
+**describe(name, fn)**
 - name: group name used to indentify the group of tests
 - fn: function that contains the expectations to test
 
-test.skip / describe.skip - skips the test or group of tests
-test.only / describe.only - jest picks only that test / group to run
+`test.skip` / `describe.skip` - skips the test or group of tests
+`test.only` / `describe.only` - jest picks only that test / group to run
 
 ### Filename conventions
 
-Files with .test.js or .test.tsx suffix.
-Files with .spec.js or .spec.tsx suffix.
-Files with .js or .tsx suffix in **tests** folders.
+- Files with `.test.js` or `.test.tsx` suffix.
+- Files with `.spec.js` or `.spec.tsx` suffix.
+- Files with `.js` or `.tsx` suffix in **__tests__** folders.
 
 Recommendation is to always put your tests next to the code they are testing so that relative imports are shorter.
 
@@ -91,9 +91,9 @@ Guidelines:
 
 ### What not to test
 
-Implementation details - test behaviour not how behaviour is implemented
-Third party code - example: material ui
-Code that is not important from a user point of view
+- Implementation details - test behaviour not how behaviour is implemented
+- Third party code - example: material ui
+- Code that is not important from a user point of view
 
 [Back To The Top](#rtl-tutorial)
 
@@ -110,8 +110,15 @@ To render the component we use `render` method from RTL.
 
 For assertion, we use expect passing in the value and combine it with a matcher function from jest or jest-dom.
 
-To find single element on the page, we have: - getBy..suffix - queryBy..suffix - findBy..suffix
-To find multiple elements on the page, we have: - getAllBy..suffix - queryAllBy..suffix - findAllBy..suffix
+To find single element on the page, we have:
+- getBy..suffix
+- queryBy..suffix
+- findBy..suffix
+
+To find multiple elements on the page, we have:
+- getAllBy..suffix
+- queryAllBy..suffix
+- findAllBy..suffix
 
 The suffix can be one of `Role`, `LabelText`, `PlaceHolderText`, `Text`, `DisplayValue`, `AltText`, `Title` and finally `TestId`.
 
@@ -123,9 +130,9 @@ Link to all roles usage: https://www.w3.org/TR/html-aria/#docconformance
 `getByRole Options`:
 
 - name: The accessible name is for simple cases equal to:
-  1. the label of a form element
-  2. the text content of a button
-  3. the value of the aria-label attribute
+  - the label of a form element
+  - the text content of a button
+  - the value of the aria-label attribute
 - level: Example: for headings
 - hidden
 - selected
