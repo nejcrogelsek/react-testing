@@ -148,7 +148,7 @@ Returns the input, textarea or select element that has the matching display valu
 #### getByAltText
 
 Will return the element that has the given alt text.
-This method only supports elements which accept an alt attribute like <img />, <input>, <area> or custom html elements.
+This method only supports elements which accept an alt attribute like `img`, `input`, `area` or custom html elements.
 
 #### getByTitle
 
@@ -209,22 +209,22 @@ TextMatch represents a type which can be either a:
 - function
 
 ### TextMatch - string
-<div>Hello World</div>
-screen.getByText(`"Hello World"`) // full string match
-screen.getByText(`"llo World", { `exact`: false }`) // substring match
-screen.getByText(`"hello world", { `exact`: false }`) // ignore case
+`Hello World`
+screen.getByText(**"Hello World"**) // full string match
+screen.getByText(**"llo World", { `exact`: false }**) // substring match
+screen.getByText(**"hello world", { `exact`: false }**) // ignore case
 
 ### TextMatch - regex
-<div>Hello World</div>
-screen.getByText(`/World/`) // substring match
-screen.getByText(`/world/i`) // substring match, ignore case
-screen.getByText(`/^hello world$/i`) // full string match, ignore case
+`Hello World`
+screen.getByText(**/World/**) // substring match
+screen.getByText(**/world/i**) // substring match, ignore case
+screen.getByText(**/^hello world$/i**) // full string match, ignore case
 
 ### TextMatch - custom function
-<div>Hello World</div>
+`Hello World`
 (content?: string, element?: Element | null) => boolean
 
-screen.getByText(`(content) => content.startsWith("Hello")`)
+screen.getByText(**(content) => content.startsWith("Hello")**)
 
 Find multiple elements in the DOM.
 Returns an array of all matching nodes for a query, and throws an error if no elements match.
@@ -264,13 +264,16 @@ Difference between fireEvent and user-event:
 - type()
 - clear()
 ![utilityapi_clear](./src/assets/readme/utilityapi_clear.png)
+---
 - selectOptions()
-![utilityapi_selectOptions](./src/assets/readme/utilityapi_selectOptions.png)
+![utilityapi_selectoptions](./src/assets/readme/utilityapi_selectoptions.png)
+---
 - deselectOptions()
-![utilityapi_deselectOptions](./src/assets/readme/utilityapi_deselectOptions.png)
+![utilityapi_deselectoptions](./src/assets/readme/utilityapi_deselectoptions.png)
+---
 - upload()
 ![utilityapi_upload](./src/assets/readme/utilityapi_upload.png)
-
+---
 `Clipboard API`
 - copy()
 - cut()
