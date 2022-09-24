@@ -36,6 +36,7 @@ You can find different versions [HERE](https://www.npmjs.com/package/@testing-li
     - [Pointer interactions](#pointer-interactions)
     - [Keyboard interactions](#keyboard-interactions)
     - [act](#act)
+- [Mocking HTTP Requests](#mocking-http-requests)
 - [Available Scripts](#available-scripts)
 - [Learn more](#learn-more)
 - [References](#references)
@@ -299,7 +300,12 @@ Read more about act [HERE](https://reactjs.org/docs/testing-recipes.html#act).
 [Back To The Top](#rtl-tutorial)
 
 ## Mocking HTTP Requests
-We do that with [Mock service worker](https://mswjs.io/).
+We do that with [Mock service worker](https://mswjs.io/docs/).
+
+- [Install instructions](https://mswjs.io/docs/getting-started/install)
+- [Integrate instructions with Node](https://mswjs.io/docs/getting-started/integrate/node)
+
+[Back To The Top](#rtl-tutorial)
 
 ## Available Scripts
 
