@@ -298,6 +298,9 @@ Read more about act [HERE](https://reactjs.org/docs/testing-recipes.html#act).
 
 [Back To The Top](#rtl-tutorial)
 
+## Mocking HTTP Requests
+We do that with [Mock service worker](https://mswjs.io/).
+
 ## Available Scripts
 
 In the project directory, you can run:
