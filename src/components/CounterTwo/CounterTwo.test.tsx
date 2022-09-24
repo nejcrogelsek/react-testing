@@ -33,9 +33,6 @@ describe("CounterTwo", () => {
     await user.click(incrementButton);
     await user.click(decrementButton);
 
-    //TODO: FIX THIS
-    /* Expected number of calls: 1
-       Received number of calls: 0 */
     expect(incrementHandler).toHaveBeenCalledTimes(1);
     expect(decrementHandler).toHaveBeenCalledTimes(1);
   });
