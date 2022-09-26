@@ -1,8 +1,8 @@
-import { FC, useState } from "react";
+import { FC, useState } from 'react'
 
 const Counter: FC = () => {
-  const [count, setCount] = useState(0);
-  const [amount, setAmount] = useState(0);
+  const [count, setCount] = useState(0)
+  const [amount, setAmount] = useState(0)
 
   return (
     <div>
@@ -16,7 +16,7 @@ const Counter: FC = () => {
       />
       <button onClick={() => setCount(amount)}>Set</button>
     </div>
-  );
-};
+  )
+}
 
-export default Counter;
+export default Counter

@@ -39,6 +39,7 @@ You can find different versions [HERE](https://www.npmjs.com/package/@testing-li
 - [Mocking HTTP Requests](#mocking-http-requests)
 - [Static analysis testing](#static-analysis-testing)
     - [ESlint](#eslint)
+    - [Prettier](#prettier)
 - [Available Scripts](#available-scripts)
 - [Learn more](#learn-more)
 - [References](#references)
@@ -331,6 +332,16 @@ Tools for static analysis testing:
 ### ESlint
 
 ESlint is a tool for identifying and reporting on patterns found in ECMAScript / JavaScript code, with the goal of making code more consistent and avoiding bugs.
+
+### Prettier
+
+Prettier is an opinionated code formatter that ensures that all outputted code conforms to a consistent style.
+
+```bash
+npm i -D --exact prettier
+```
+
+We added `--exact` because we want all users to have the same version of prettier.
 
 [Back To The Top](#rtl-tutorial)
 

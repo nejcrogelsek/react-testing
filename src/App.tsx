@@ -1,7 +1,7 @@
-import "./App.css";
-import AppProviders from "./providers/app-providers";
-import MuiMode from "./components/mui/mui-mode";
-import Home from "./pages/Home/Home";
+import './App.css'
+import AppProviders from './providers/app-providers'
+import MuiMode from './components/mui/mui-mode'
+import Home from './pages/Home/Home'
 
 const App = () => {
   return (
@@ -11,7 +11,7 @@ const App = () => {
         <Home />
       </div>
     </AppProviders>
-  );
-};
+  )
+}
 
-export default App;
+export default App

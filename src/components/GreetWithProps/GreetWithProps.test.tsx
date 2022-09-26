@@ -3,8 +3,8 @@
   It should render hello followed by the name.
 */
 
-import { render, screen } from "@testing-library/react";
-import Greet from "./GreetWithProps";
+import { render, screen } from '@testing-library/react'
+import Greet from './GreetWithProps'
 
 /* Group tests
   describe(name, fn)
@@ -12,20 +12,20 @@ import Greet from "./GreetWithProps";
     - fn: function that contains the expectations to test
   */
 
-describe("GreetWithProps", () => {
-  test("renders correctly", () => {
-    render(<Greet />);
-    const textElement = screen.getByText(/hello/i);
+describe('GreetWithProps', () => {
+  test('renders correctly', () => {
+    render(<Greet />)
+    const textElement = screen.getByText(/hello/i)
 
-    expect(textElement).toBeInTheDocument();
-  });
+    expect(textElement).toBeInTheDocument()
+  })
 
-  describe("Nested", () => {
-    test("renders with a name", () => {
-      render(<Greet name="John" />);
-      const textElement = screen.getByText(/hello john/i);
+  describe('Nested', () => {
+    test('renders with a name', () => {
+      render(<Greet name="John" />)
+      const textElement = screen.getByText(/hello john/i)
 
-      expect(textElement).toBeInTheDocument();
-    });
-  });
-});
+      expect(textElement).toBeInTheDocument()
+    })
+  })
+})

@@ -1,6 +1,6 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import App from "./App";
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import App from './App'
 
 /* Jest is a test runner than can:
  - find the tests 
@@ -17,8 +17,8 @@ import App from "./App";
 
 // skip - skips the test
 // only - jest picks only that test to run
-test.skip("renders learn react link", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+test.skip('renders learn react link', () => {
+  render(<App />)
+  const linkElement = screen.getByText(/learn react/i)
+  expect(linkElement).toBeInTheDocument()
+})

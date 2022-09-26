@@ -1,15 +1,15 @@
-import { FC, useEffect, useState } from "react";
-import { SkillsProps } from "./skills.types";
+import { FC, useEffect, useState } from 'react'
+import { SkillsProps } from './skills.types'
 
 const Skills: FC<SkillsProps> = (props: SkillsProps) => {
-  const { skills } = props;
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { skills } = props
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
-      setIsLoggedIn(true);
-    }, 1500);
-  }, []);
+      setIsLoggedIn(true)
+    }, 1500)
+  }, [])
 
   return (
     <>
@@ -24,7 +24,7 @@ const Skills: FC<SkillsProps> = (props: SkillsProps) => {
         )}
       </ul>
     </>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills

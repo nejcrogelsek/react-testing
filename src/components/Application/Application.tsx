@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from 'react'
 
 const Application: FC = () => {
   return (
@@ -44,7 +44,7 @@ const Application: FC = () => {
         <button disabled>Submit</button>
       </form>
     </>
-  );
-};
+  )
+}
 
-export default Application;
+export default Application

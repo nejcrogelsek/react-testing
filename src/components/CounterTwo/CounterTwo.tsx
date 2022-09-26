@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { CounterTwoProps } from "./counter.types";
+import { FC } from 'react'
+import { CounterTwoProps } from './counter.types'
 
 const CounterTwo: FC<CounterTwoProps> = (props: CounterTwoProps) => {
   return (
@@ -13,7 +13,7 @@ const CounterTwo: FC<CounterTwoProps> = (props: CounterTwoProps) => {
         <button onClick={props.handleDecrement}>Decrement</button>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default CounterTwo;
+export default CounterTwo

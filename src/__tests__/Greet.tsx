@@ -1,32 +1,32 @@
-import { render, screen } from "@testing-library/react";
-import Greet from "../components/Greet/Greet";
+import { render, screen } from '@testing-library/react'
+import Greet from '../components/Greet/Greet'
 
-test("Greet component renders correctly", () => {
-  render(<Greet />);
-  const textElement = screen.getByText(/hello/i);
+test('Greet component renders correctly', () => {
+  render(<Greet />)
+  const textElement = screen.getByText(/hello/i)
 
-  expect(textElement).toBeInTheDocument();
-});
+  expect(textElement).toBeInTheDocument()
+})
 
-it("component renders correctly", () => {
-  render(<Greet />);
-  const textElement = screen.getByText(/hello/i);
+it('component renders correctly', () => {
+  render(<Greet />)
+  const textElement = screen.getByText(/hello/i)
 
-  expect(textElement).toBeInTheDocument();
-});
+  expect(textElement).toBeInTheDocument()
+})
 
 // test.only
-fit("test.only Greet component renders correctly", () => {
-  render(<Greet />);
-  const textElement = screen.getByText(/hello/i);
+fit('test.only Greet component renders correctly', () => {
+  render(<Greet />)
+  const textElement = screen.getByText(/hello/i)
 
-  expect(textElement).toBeInTheDocument();
-});
+  expect(textElement).toBeInTheDocument()
+})
 
 // test.skip
-xit("test.skip Greet component renders correctly", () => {
-  render(<Greet />);
-  const textElement = screen.getByText(/hello/i);
+xit('test.skip Greet component renders correctly', () => {
+  render(<Greet />)
+  const textElement = screen.getByText(/hello/i)
 
-  expect(textElement).toBeInTheDocument();
-});
+  expect(textElement).toBeInTheDocument()
+})
