@@ -37,6 +37,7 @@ You can find different versions [HERE](https://www.npmjs.com/package/@testing-li
     - [Keyboard interactions](#keyboard-interactions)
     - [act](#act)
 - [Mocking HTTP Requests](#mocking-http-requests)
+- [Static analysis testing](#static-analysis-testing)
 - [Available Scripts](#available-scripts)
 - [Learn more](#learn-more)
 - [References](#references)
@@ -305,6 +306,26 @@ We do that with [Mock service worker](https://mswjs.io/docs/).
 
 - [Install instructions](https://mswjs.io/docs/getting-started/install)
 - [Integrate instructions with Node](https://mswjs.io/docs/getting-started/integrate/node)
+
+[Back To The Top](#rtl-tutorial)
+
+## Static analysis testing
+Process of verifying that your code meets certain expectations without actually running it.
+- Ensure consistent style and formatting
+- Check for common mistakes and possible bugs
+- Limit the complexity of code
+- Verify type consistency
+
+All types of tests run the code and then compare the outcome agains known expected outputs to see if everything works OK.
+Statis testing analyses aspects such as readability, consistency, error handling, type checking, and alignment with best practices.
+Testing checks if your code works or not, whereas static analysis checks if it is written well or not.
+
+Tools for static analysis testing:
+- Typescript
+- ESlint
+- Prettier
+- Husky
+- lint-staged
 
 [Back To The Top](#rtl-tutorial)
 
