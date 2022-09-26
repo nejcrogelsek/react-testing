@@ -38,6 +38,7 @@ You can find different versions [HERE](https://www.npmjs.com/package/@testing-li
     - [act](#act)
 - [Mocking HTTP Requests](#mocking-http-requests)
 - [Static analysis testing](#static-analysis-testing)
+    - [ESlint](#eslint)
 - [Available Scripts](#available-scripts)
 - [Learn more](#learn-more)
 - [References](#references)
@@ -326,6 +327,10 @@ Tools for static analysis testing:
 - Prettier
 - Husky
 - lint-staged
+
+### ESlint
+
+ESlint is a tool for identifying and reporting on patterns found in ECMAScript / JavaScript code, with the goal of making code more consistent and avoiding bugs.
 
 [Back To The Top](#rtl-tutorial)
 

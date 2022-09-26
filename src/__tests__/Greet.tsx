@@ -8,7 +8,7 @@ test("Greet component renders correctly", () => {
   expect(textElement).toBeInTheDocument();
 });
 
-it("Greet component renders correctly", () => {
+it("component renders correctly", () => {
   render(<Greet />);
   const textElement = screen.getByText(/hello/i);
 
@@ -16,7 +16,7 @@ it("Greet component renders correctly", () => {
 });
 
 // test.only
-fit("Greet component renders correctly", () => {
+fit("test.only Greet component renders correctly", () => {
   render(<Greet />);
   const textElement = screen.getByText(/hello/i);
 
@@ -24,7 +24,7 @@ fit("Greet component renders correctly", () => {
 });
 
 // test.skip
-xit("Greet component renders correctly", () => {
+xit("test.skip Greet component renders correctly", () => {
   render(<Greet />);
   const textElement = screen.getByText(/hello/i);
 
