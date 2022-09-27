@@ -4,42 +4,46 @@ You can find tutorial on [Codevolution](https://www.youtube.com/watch?v=T2sv8jXo
 
 **IMPORTANT**
 `CRA installs user-event but needs upgrading!`
+
 - Latest version when writing this repo is:
+
 ```bash
 npm i @testing-library/user-event@14.4.3
 ```
+
 You can find different versions [HERE](https://www.npmjs.com/package/@testing-library/user-event)
 
 ### Table of contents
 
 - [About tests](#about-tests)
-    - [Group tests](#group-tests)
-    - [Filename conventions](#filename-conventions)
-    - [Assertions](#assertions)
+  - [Group tests](#group-tests)
+  - [Filename conventions](#filename-conventions)
+  - [Assertions](#assertions)
 - [What to test](#what-to-test)
-    - [What not to test](#what-not-to-test)
+  - [What not to test](#what-not-to-test)
 - [RTL Queries](#rtl-queries)
-    - [Options](#options)
-        - [getByRole](#getbyrole)
-        - [getByPlaceholderText](#getbyplaceholdertext)
-        - [getByText](#getbytext)
-        - [getByDisplayValue](#getbydisplayvalue)
-        - [getByAltText](#getbyalttext)
-        - [getByTitle](#getbytitle)
-        - [getByTestId](#getbytestid)
-        - [getAllBy](#getallby)
-        - [queryBy & queryAllBy](#queryby-&-queryallby)
-        - [findBy & findAllBy](#findby-&-findallby)
+  - [Options](#options)
+    - [getByRole](#getbyrole)
+    - [getByPlaceholderText](#getbyplaceholdertext)
+    - [getByText](#getbytext)
+    - [getByDisplayValue](#getbydisplayvalue)
+    - [getByAltText](#getbyalttext)
+    - [getByTitle](#getbytitle)
+    - [getByTestId](#getbytestid)
+    - [getAllBy](#getallby)
+    - [queryBy & queryAllBy](#queryby-&-queryallby)
+    - [findBy & findAllBy](#findby-&-findallby)
 - [Priority Order for Queries](#priority-order-for-queries)
 - [TextMatch](#textmatch)
 - [Testing user interactions](#testing-user-interactions)
-    - [Pointer interactions](#pointer-interactions)
-    - [Keyboard interactions](#keyboard-interactions)
-    - [act](#act)
+  - [Pointer interactions](#pointer-interactions)
+  - [Keyboard interactions](#keyboard-interactions)
+  - [act](#act)
 - [Mocking HTTP Requests](#mocking-http-requests)
 - [Static analysis testing](#static-analysis-testing)
-    - [ESlint](#eslint)
-    - [Prettier](#prettier)
+  - [ESlint](#eslint)
+  - [Prettier](#prettier)
+  - [Husky](#husky)
 - [Available Scripts](#available-scripts)
 - [Learn more](#learn-more)
 - [References](#references)
@@ -48,6 +52,7 @@ You can find different versions [HERE](https://www.npmjs.com/package/@testing-li
 ## About tests
 
 Jest is a test runner than can:
+
 - find the tests
 - run it
 - provide user friendly message if test is PASS or FAIL
@@ -55,6 +60,7 @@ Jest is a test runner than can:
 Run jest: `npm run test`
 
 **test(name, fn, timeout)**
+
 - name: test name used to indentify the test
 - fn: function that contains the expectations to test
 - timeout: is optional for specifying how long to wait before aborting the test. The default timeout value is 5 seconds.
@@ -62,6 +68,7 @@ Run jest: `npm run test`
 ### Group tests
 
 **describe(name, fn)**
+
 - name: group name used to indentify the group of tests
 - fn: function that contains the expectations to test
 
@@ -72,7 +79,7 @@ Run jest: `npm run test`
 
 - Files with `.test.js` or `.test.tsx` suffix.
 - Files with `.spec.js` or `.spec.tsx` suffix.
-- Files with `.js` or `.tsx` suffix in **__tests__** folders.
+- Files with `.js` or `.tsx` suffix in ****tests**** folders.
 
 Recommendation is to always put your tests next to the code they are testing so that relative imports are shorter.
 
@@ -90,6 +97,7 @@ Find more about using matchers [here](https://jestjs.io/docs/using-matchers) or 
 ## What to test
 
 Guidelines:
+
 - Test if component renders
 - Test if component renders with props
 - Test if component renders in different states (auth / no auth)
@@ -117,11 +125,13 @@ To render the component we use `render` method from RTL.
 For assertion, we use expect passing in the value and combine it with a matcher function from jest or jest-dom.
 
 To find single element on the page, we have:
+
 - getBy..suffix
 - queryBy..suffix
 - findBy..suffix
 
 To find multiple elements on the page, we have:
+
 - getAllBy..suffix
 - queryAllBy..suffix
 - findAllBy..suffix
@@ -180,11 +190,13 @@ Returns an array of all matching nodes for a query, and throws an error if no el
 #### queryBy & queryAllBy
 
 `queryBy`:
+
 - Returns the matching node for a query, and return null if no elements match.
 - Useful for asserting an element that is not present.
 - Throws an error if more than one match is found.
 
 `queryAllBy`:
+
 - Returns an array of all matching nodes for a query, and return an empty array if no elements match.
 
 #### findBy & findAllBy
@@ -193,17 +205,21 @@ What if elements are not present in the DOM to begin but make their way into the
 For example, data tha is fetched from a server will be rendered only after a few miliseconds.
 
 `findBy`:
+
 - Returns a promise which resolves when an element is found which matches the given query.
 - The promise is rejected if no element is found or if more than one element is found after the default timeout of 1000ms.
 
 `findAllBy`:
+
 - Returns a promise which resolves to an array of elements when any elements are found which match the given query.
 - The promise is rejected if no elements are found after the default timeout of 1000ms.
 
 [Back To The Top](#rtl-tutorial)
 
 ## Priority Order for Queries
+
 "Your test should resemble how users interact with your code (component, page, etc.) as much as possible"
+
 1. getByRole
 2. getByLabelText
 3. getByPlaceholderText
@@ -218,23 +234,27 @@ For example, data tha is fetched from a server will be rendered only after a few
 ## TextMatch
 
 TextMatch represents a type which can be either a:
+
 - string
 - regex
 - function
 
 ### TextMatch - string
+
 `Hello World`
 screen.getByText(**"Hello World"**) // full string match
 screen.getByText(**"llo World", { `exact`: false }**) // substring match
 screen.getByText(**"hello world", { `exact`: false }**) // ignore case
 
 ### TextMatch - regex
+
 `Hello World`
 screen.getByText(**/World/**) // substring match
 screen.getByText(**/world/i**) // substring match, ignore case
 screen.getByText(**/^hello world$/i**) // full string match, ignore case
 
 ### TextMatch - custom function
+
 `Hello World`
 (content?: string, element?: Element | null) => boolean
 
@@ -251,12 +271,14 @@ Difference between fireEvent and user-event:
 ![fireEvent_vs_user-event](./src/assets/readme/fireEvent_vs_user-event.png)
 
 `user-event`:
+
 - A companion library for Testing Library that stimulates user interfaces by dispatching the events that would happen if the interaction took place in the browser.
 - It is recommended way to test user interactions with RTL.
 
 ### Pointer interactions
 
 `Convenience APIs` typically used when writting tests.
+
 - click() - is a convenience API that internally calls pointer API
 - dblClick() - double click
 - tripleClick() - triple click
@@ -264,46 +286,63 @@ Difference between fireEvent and user-event:
 - unhover() - on unhover (use example: appearance of tooltips, hover styles,...)
 
 `Pointer APIs`
+
 - pointer({keys: '[MouseLeft]'}) - left mouse click `OR` pointer('[MouseLeft]') - if keys is the only argument to functions.
-- pointer({keys: '[MouseLeft][MouseRight]'}) - left mouse click followed by right mouse click 
+- pointer({keys: '[MouseLeft][mouseright]'}) - left mouse click followed by right mouse click
 - pointer('[MouseLeft>]') - press a button without releasing it
 - pointer('[/MouseLeft]') - releasing previously pressed button
 
 ### Keyboard interactions
 
 `Convenience API`
+
 - tab() - click TAB on keyboard
 
 `Utility API`
+
 - type()
+
 ---
+
 - clear()
-![utilityapi_clear](./src/assets/readme/utilityapi_clear.png)
+  ![utilityapi_clear](./src/assets/readme/utilityapi_clear.png)
+
 ---
+
 - selectOptions()
-![utilityapi_selectoptions](./src/assets/readme/utilityapi_selectoptions.png)
+  ![utilityapi_selectoptions](./src/assets/readme/utilityapi_selectoptions.png)
+
 ---
+
 - deselectOptions()
-![utilityapi_deselectoptions](./src/assets/readme/utilityapi_deselectoptions.png)
+  ![utilityapi_deselectoptions](./src/assets/readme/utilityapi_deselectoptions.png)
+
 ---
+
 - upload()
-![utilityapi_upload](./src/assets/readme/utilityapi_upload.png)
+  ![utilityapi_upload](./src/assets/readme/utilityapi_upload.png)
+
 ---
+
 `Clipboard API`
+
 - copy()
 - cut()
 - paste()
 
 `Keyboard API`
+
 - keyboard('foo') // translates to: f, o, o
 - keyboard('{Shift>}A{/Shift}') // hold a key -> translates to: Shift(down), A, Shift(up)
 
 ### act
+
 Read more about act [HERE](https://reactjs.org/docs/testing-recipes.html#act).
 
 [Back To The Top](#rtl-tutorial)
 
 ## Mocking HTTP Requests
+
 We do that with [Mock service worker](https://mswjs.io/docs/).
 
 - [Install instructions](https://mswjs.io/docs/getting-started/install)
@@ -312,7 +351,9 @@ We do that with [Mock service worker](https://mswjs.io/docs/).
 [Back To The Top](#rtl-tutorial)
 
 ## Static analysis testing
+
 Process of verifying that your code meets certain expectations without actually running it.
+
 - Ensure consistent style and formatting
 - Check for common mistakes and possible bugs
 - Limit the complexity of code
@@ -323,6 +364,7 @@ Statis testing analyses aspects such as readability, consistency, error handling
 Testing checks if your code works or not, whereas static analysis checks if it is written well or not.
 
 Tools for static analysis testing:
+
 - Typescript
 - ESlint
 - Prettier
@@ -342,6 +384,26 @@ npm i -D --exact prettier
 ```
 
 We added `--exact` because we want all users to have the same version of prettier.
+
+### Husky
+
+Husky is a tool that helps improve your commits and more.
+
+```bash
+npm i -D husky
+```
+
+```bash
+npm run husky:postinstall
+```
+
+**pre-commit file:**
+```bash
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npm run lint && npm run format
+```
 
 [Back To The Top](#rtl-tutorial)
 
