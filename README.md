@@ -44,6 +44,7 @@ You can find different versions [HERE](https://www.npmjs.com/package/@testing-li
   - [ESlint](#eslint)
   - [Prettier](#prettier)
   - [Husky](#husky)
+  - [lint-staged](#lint-staged)
 - [Available Scripts](#available-scripts)
 - [Learn more](#learn-more)
 - [References](#references)
@@ -404,6 +405,10 @@ npm run husky:postinstall
 
 npm run lint && npm run format
 ```
+
+### lint-staged
+
+Run linters (and formatters) agains staged git files.
 
 [Back To The Top](#rtl-tutorial)
 
